@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- fonts-link -->
+      <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="abhi1.js"></script>
+    
+    <style>
+       .carousel{
+  /* height: 80vh;  */
+  img{
+      height: 700px;
+      object-fit: cover;
+      
+  }
+}
+      .carousel-caption{
+        a{
+          text-decoration: none;
+          h5{
+            font-size: larger;
+            color: white;
+          }
+        }
+      }
+      *{
+        padding: 0;
+        margin: 0;
+        
+      }
+      .hover:hover{
+        transform: scale(1.2);
+        transition: 0.4s;
+      }
+     .text-wrapper {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+  height: 150px;
+  margin: 0 auto; 
+     }
+    footer{
+      width: 100%;
+      height: 40vh;
+      background-color: black;
+
+    }
+#footer-content{
+  text-transform: capitalize;
+  color:white;
+  font-size: 15px;
+
+}
+#copyright{
+  /* font-size: 20px;/ */
+  color: gray;
+  text-align: center;
+}
+ul{
+  text-decoration: none;
+  li{
+    text-decoration: none;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+nav{
+  height: 100px;
+  /* align-items: center; */
+}
+
+#carouselExampleDark{
+  background-color: beige;
+
+}
+.navbar{
+  background-color: beige;
+}
+.card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+
+
+    </style>
+    <!-- <header> -->
+    <link rel="stylesheet" href="food.css">
+</head>
+  <body style="background: url(backgroundwebpexels-gdtography-277628-950241.jpg); background-repeat: no-repeat; background-attachment: fixed;">
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="www.google.com" style="font-size: 25px;">
+          <i class="fa-solid m-1 fa-pepper-hot h-4 text-danger" style="font-size: 30px;"></i>Pepper<span style="color: red;">Hot</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary rounded " type="submit">Search</button>
+            <select class="form-select ms-2 form-outline-danger" aria-label="Default select example">
+              <option selected>Today's Crave</option>
+              <option value="1">Desserts</option>
+              <option value="2">Starters</option>
+              <option value="3">Drinks</option>
+              <option value="4">Vegetarian/Vegan Mains</option>
+              <option value="5">Soups & Salads</option>
+            </select>
+            
+            <!-- Cart Icon and Cart Button -->
+            <div class="d-flex ms-2">
+              <button class="btn btn-outline-dark  d-flex align-items-center px-3">
+                <i class="fa fa-shopping-cart fs-5 me-2"></i>Cart
+              </button>
+            </div>
+    
+            <button class="btn btn-outline-dark ms-2  w-50" type="button" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</button>
+            <button class="btn btn-outline-dark ms-2  w-50" type="button" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+  <!-- Sign In Modal -->
+  <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="signInEmail" class="form-label">Email ID</label>
+              <input type="email" class="form-control" id="signInEmail" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="signInPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signInPassword" placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-secondary">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="signUpEmail" class="form-label">Email ID</label>
+              <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email ID">
+            </div>
+            <div class="mb-3">
+              <label for="signUpPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signUpPassword" placeholder="Enter your password">
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">City</label>
+              <select class="form-select" id="city">
+                <option selected>Choose your city</option>
+                <option value="110001">Delhi (110001)</option>
+                <option value="400001">Mumbai (400001)</option>
+                <option value="600001">Chennai (600001)</option>
+                <option value="700001">Kolkata (700001)</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+            </div>
+            <button type="submit" class="btn btn-secondary">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <!-- Carousel Start -->
+ <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-indicators justify-content-center">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="brownie-2857462_1280.jpg" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption d-none d-md-flex justify-content-between align-items-center">
+        <div class="text-start">
+          <h3 class="text-light fs-1">Delicious Brownie</h3>
+          <p>Indulge in the richness of our signature brownie dessert.</p>
+        </div>
+        <div class="text-end">
+          <button class="btn btn-outline-light">Try Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="sushi-balls-5878892_1920.jpg" class="d-block w-100" alt="Slide 2">
+      <div class="carousel-caption d-none d-md-flex justify-content-between align-items-center">
+        <div class="text-start">
+          <h3 class="text-light fs-1">Exquisite Sushi</h3>
+          <p>Fresh sushi balls crafted with the finest ingredients.</p>
+        </div>
+        <div class="text-end">
+          <button class="btn btn-outline-light">Try Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="plum-cake-3641849_1280 (1).jpg" class="d-block w-100" alt="Slide 3">
+      <div class="carousel-caption d-none d-md-flex justify-content-between align-items-center">
+        <div class="text-start">
+          <h3 class="text-light fs-1">Plum Cake - A Festive Treat</h3>
+          <p>Rich and moist cake packed with dried fruits, nuts, and the warmth of spices—perfect for celebrations and cozy moments!</p>
+        </div>
+        <div class="text-end">
+          <button class="btn btn-outline-light">Try Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="pexels-jack-baghel-2199968-20422129.jpg" class="d-block w-100" alt="Slide 4">
+      <div class="carousel-caption d-none d-md-flex justify-content-between align-items-center">
+        <div class="text-start">
+          <h3 class="text-light fs-1"> Crispy Dosa - A South Indian Classic</h3>
+          <p>A crispy, golden South Indian crepe made from fermented rice and lentil batter, served with chutneys and sambar.</p>
+        </div>
+        <div class="text-end">
+          <button class="btn btn-outline-light">Try Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"></button>
+ </div>
+<br>
+<style>
+  .carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  
+}
+.carousel-caption h3, .carousel-caption p {
+  margin: 0;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- carousel end  -->
+
+      </div>
+      <div class="pb-5" id="order now">
+        <div class="container">
+           <h2 class="text-center title text-dark">Flavors of the Day</h2>
+          </div>
+          <br>
+        <!-- </div> -->
+        <div class="" id="new-collection">
+          <div class="text-center" >
+            <button class="btn btn-outline-dark shopping-buttons rounded-pill m-2 fs-5 text-danger ">Order Now</button>
+            <button class="btn  btn-outline-dark shopping-buttons rounded-pill m-2 fs-5 text-danger">View Menu</button>
+            <button class="btn  btn-outline-dark shopping-buttons rounded-pill m-2 fs-5 text-danger ">cake lovers</button>
+            <button class="btn  btn-outline-dark shopping-buttons rounded-pill m-2 fs-5 text-danger ">vegan's paradise</button>
+            <button class="btn  btn-outline-dark shopping-buttons rounded-pill m-2 fs-5 text-danger ">Contact Us</button> 
+
+         </div>
+         <br>
+     
+        <!-- cards with images -->
+
+      <!-- first card  -->
+     <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img id="hover-effect" src="juice-1148215.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title  text-center fs-3">Zesty Lemonade</h5>
+            <h4 class="card-title  text-center ">Refreshing citrus in every sip.</h4>
+            <p class="card-text  text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 99</h4>
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- second card  -->
+      <div class="col">
+        <div class="card">
+          <img id="hover-effect2" src="pexels-karolina-grabowska-5718025.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-3">Savory Chicken</h5>
+            <h4 class="card-title text-center ">Tender, flavorful chicken delight.</h4>
+            <p class="card-text  text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 569</h4>
+            
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- third card  -->
+      
+      <div class="col">
+        <div class="card">
+          <img id="hover-effect3" src="pexels-daniel-reche-718241-3616956 (1).jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-3">Burgar Bliss</h5>
+            <h4 class="card-title text-center">Satisfy your burger cravings!</h4>
+            <p class="card-text  text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 160</h4>
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+          </div>
+        </div>
+      </div>
+
+
+       <!-- fourthcard -->
+      <div class="col">
+        <div class="card">
+          <img id="hover-effect4" src="imageslide3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title  text-center fs-3">Sunny Breakfast</h5>
+            <h4 class="card-title  text-center ">Energize your morning with goodness.</h4>
+            <p class="card-text  text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 190</h4>
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- fifth card  -->
+
+      <div class="col">
+        <div class="card">
+          <img id="hover-effect5" src="imageslide6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-3">Fiery Paneer</h5>
+            <h4 class="card-title text-center ">Soft paneer infused with bold spices.</h4>
+            <p class="card-text  text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 259</h4>
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- sixth card  -->
+      
+      <div class="col">
+        <div class="card">
+          <img id="hover-effect6" src="imageslide4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-3">Zesty Nuggets</h5>
+            <h4 class="card-title text-center">Savor the heat in every nugget!</h4>
+            <p class="card-text  text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 149</h4>
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+          </div>
+        </div>
+      </div>
+
+       <!-- seventh card  -->
+      <div class="col">
+        <div class="card">
+          <img id="hover-effect7" src="pexels-donaldtong94-2205270.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title  text-center fs-3">Sweet Surprise</h5>
+            <h4 class="card-title  text-center ">Experience fun, flavor, and fusion!</h4>
+            <p class="card-text  text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 120</h4>
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- eighth card  -->
+      <div class="col">
+        <div class="card">
+          <img   id="hover-effect8" src="pexels-enginakyurt-2994900.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-3">Savory Chicken</h5>
+            <h4 class="card-title text-center ">Tender, flavorful chicken delight.</h4>
+            <p class="card-text text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 399</h4>
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- nineth card  -->
+      <div class="col">
+        <div class="card">
+          <img id="hover-effect9" src="pexels-daniel-reche-718241-3616956 (1).jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-3">Burgar Bliss</h5>
+            <h4 class="card-title text-center">Satisfy your burger cravings!</h4>
+            <p class="card-text  text-center " style="color: red;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <h4 class="card-text text-center f-3 fw-normal">&#8377 145</h4>
+            <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+          </div>
+        </div>
+      </div>
+     </div>
+       
+
+    
+      
+     <div class="py-5" id="new-collection">
+      <div class="container">
+         <h2 class="text-center title text-dark">Discover the best food & drinks in Mumbai</h2>
+        </div>
+      </div>
+      
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 ">
+        <div class="col">
+          <div class="card">
+            <img id="hover-effect" src="pexels-shameel-mukkath-3421394-11161475.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title  text-center fs-3">Royal Biryani Bliss</h5>
+              <h3 class="card-title  text-center ">"Heritage Biryani Feast" Relish the rich tradition of slow-cooked biryani bursting with flavor.</h3>
+              <h4 class="card-text text-center f-3 fw-normal">&#8377 599</h4>
+              <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- second card  -->
+        <div class="col">
+          <div class="card">
+            <img id="hover-effect2" src="pexels-tonyleong81-2092897.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center fs-3">Rainbow Veggie Bowl</h5>
+              <h4 class="card-title text-center ">"Colorful Harvest Salad" A crunchy mix of seasonal veggies topped with a tangy, flavorful dressing.</h4>
+              <h4 class="card-text text-center f-3 fw-normal">&#8377 249</h4>
+              <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img id="hover-effect2" src="pexels-jack-baghel-2199968-20422129.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center fs-3">South Indian Delight</h5>
+              <h4 class="card-title text-center ">"Authentic Masala Dosa" Thin, crispy dosa with a zesty potato masala, perfect with coconut chutney.</h4>
+              <h4 class="card-text text-center f-3 fw-normal">&#8377 199</h4>
+              
+              <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img id="hover-effect2" src="pexels-lucasandrade-19781596.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center fs-3">Flavors of India Platter</h5>
+              <h4 class="card-title text-center ">"Classic Indian Delight"Enjoy a mix of spiced lentils, vegetables, rice, and warm flatbreads.</h4>
+              <h4 class="card-text text-center f-3 fw-normal">&#8377 359</h4>
+              
+              <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img id="hover-effect2" src="pexels-shameel-mukkath-3421394-5175578.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center fs-3">Creamy Pasta</h5>
+              <h4 class="card-title text-center ">"Classic Alfredo Delight" A luscious and creamy pasta dish with a blend of savory flavors</h4>
+              <h4 class="card-text text-center f-3 fw-normal">&#8377 169</h4>
+              
+              <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="card">
+            <img id="hover-effect2" src="pexels-iamabdullahsheik-10508207.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center fs-3">Authentic Curry</h5>
+              <h4 class="card-title text-center ">Rich Indian Curry Bowl"A flavorful curry simmered with aromatic spices, served with rice or naan.</h4>
+              <h4 class="card-text text-center f-3 fw-normal">&#8377 569</h4>
+              
+              <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+  
+            </div>
+          </div>
+        </div>
+      </div>  
+
+
+      <div class="py-5" id="new-collection">
+        <div class="container">
+           <h2 class="text-center title text-success">Herbivore Haven in Mumbai</h2>
+          </div>
+        </div>
+      
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100" >
+                <img src="sushi-balls-5878892_1920.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title">Sushi Balls - A Bite-Sized Delight</h5>
+                  <p class="card-text">Delicious bite-sized sushi spheres made with seasoned rice, fresh fish, and vibrant toppings—perfect for snacks or parties!</p>
+                  <p class="card-text  text-center " style="color: rgb(10, 10, 10);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 139</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 19 min ago</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- card two  -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="burger-8307053_1920.png" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title"> Double Decker</h5>
+                  <p class="card-text">Sink your teeth into our classic hamburger - a perfectly grilled patty topped with crisp lettuce, fresh tomatoes, and creamy sauce.</p>
+                  <p class="card-text  text-center " style="color: rgb(10, 10, 10);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 129</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 30 mins ago</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- card three  -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="banana-4507180_1920.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title">Sweet Escape</h5>
+                  <p class="card-text">A heavenly combination of bananas, fruity ice cream flavors, and colorful toppings to transport you to paradise.</p>
+                  <p class="card-text  text-center " style="color: rgb(12, 12, 12);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 159</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 33 mins ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <!-- <br> -->
+<!-- card for next   -->
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="pizza-2589575_1920.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title">Veggie Fiesta</h5>
+                  <p class="card-text">Bursting with colorful bell peppers, juicy tomatoes, olives, and more, this pizza is a celebration of flavors.</p>
+                  <p class="card-text  text-center " style="color: rgb(8, 8, 8);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 169</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 38 mins ago</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- card two  -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="soup-7426008_1920.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title"> Veggie Symphony</h5>
+                  <p class="card-text">A symphony of fresh veggies and rich spices come together in this wholesome, satisfying soup.</p>
+                  <p class="card-text  text-center " style="color: rgb(8, 8, 8);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 219</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 40 mins ago</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- card three  -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="tofu-7249307_1920.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title"> Asian Fusion</h5>
+                  <p class="card-text">Marinated tofu stir-fried with fresh veggies and a savory-sweet glaze for a flavorful experience.</p>
+                  <p class="card-text  text-center " style="color: rgb(10, 10, 10);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 159</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 46 mins ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          
+
+          <!-- next slide  -->
+
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="smoothie-2523605_1920.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title">Chocolate Dream</h5>
+                  <p class="card-text">A luscious blend of berries, yogurt, and a hint of sweetness to give your day a flavorful start.</p>
+                  <p class="card-text  text-center " style="color: rgb(8, 8, 8);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 119</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 49 mins ago</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- card two  -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="coffee-5712773_1920.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title">Coffee Cascade</h5>
+                  <p class="card-text">A timeless classic, our filter coffee is brewed using traditional methods, delivering a velvety smooth taste with every cup.</p>
+                  <p class="card-text  text-center " style="color: rgb(5, 5, 5);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 119</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 56 im ago</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- card three  -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="cocktail-518712_1920.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body">
+                  <h5 class="card-title">Tropical Bliss</h5>
+                  <p class="card-text">An enchanting medley of flavors that's smooth, sophisticated, and irresistibly delightful.</p>
+                  <p class="card-text  text-center " style="color: rgb(5, 5, 5);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <!-- <p class="card-text text-center"><button class="btn btn-outline-danger shopping-buttons m-2  rounded-2 fs-5">try me</button></p> -->
+                  <h4 class="card-text text-center f-3 fw-normal">&#8377 99</h4>
+                  <p class="card-text text-center"><button class="btn btn-outline-dark shopping-buttons m-2  rounded-pill fs-5 ">   <i class="fa fa-shopping-cart fs-5 me-2"></i>add to cart</button></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 2 hours  ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+           
+
+
+
+
+      <!-- footer starting  -->
+    
+      <footer>
+        <div class="container-fluid my-5 text-white" style="background-color: #000000;">
+          <div class="row text-center text-lg-start">
+            <!-- About Us Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <a class="navbar-brand m-3 fw-bold" href="https://www.google.com">
+                <h3>
+                  <i class="fa-solid fa-pepper-hot text-danger"></i>
+                  <span style="color: white;">Pepper<span style="color: red;">Hot</span></span>
+                </h3>
+              </a>
+              <p style="color: gray;">
+                At PepperHot, we bring the rich flavors of India right to your doorstep. Whether you're craving spicy starters, indulgent main courses, or sweet desserts, we offer a diverse menu filled with authentic Indian dishes made with the finest ingredients.
+              </p>
+            </div>
+      
+            <!-- Get to Know Us Section -->
+            <div class="col-lg-2 col-md-6 mb-4">
+              <h5>Get to Know Us</h5>
+              <ul class="list-unstyled">
+                <li><a href="#!" style="color: gray;">About PepperHot</a></li>
+                <li><a href="#!" style="color: gray;">Our Team</a></li>
+                <li><a href="#!" style="color: gray;">Sustainability</a></li>
+                <li><a href="#!" style="color: gray;">Community Support</a></li>
+              </ul>
+            </div>
+      
+            <!-- Help Section -->
+            <div class="col-lg-2 col-md-6 mb-4">
+              <h5>Let Us Help You</h5>
+              <ul class="list-unstyled">
+                <li><a href="#!" style="color: gray;">Customer Support</a></li>
+                <li><a href="#!" style="color: gray;">Order Tracking</a></li>
+                <li><a href="#!" style="color: gray;">FAQ</a></li>
+                <li><a href="#!" style="color: gray;">Support Center</a></li>
+                <li><a href="#!" style="color: gray;">Order History</a></li>
+                <li><a href="#!" style="color: gray;">Suggestions</a></li>
+                <li><a href="#!" style="color: gray;">Feedback</a></li>
+              </ul>
+            </div>
+      
+            <!-- Make Money Section -->
+            <div class="col-lg-2 col-md-6 mb-4">
+              <h5>Make Money with Us</h5>
+              <ul class="list-unstyled">
+                <li><a href="#!" style="color: gray;">Become a Delivery Partner</a></li>
+                <li><a href="#!" style="color: gray;">List Your Kitchen</a></li>
+                <li><a href="#!" style="color: gray;">Delivery Heroes</a></li>
+                <li><a href="#!" style="color: gray;">Join Us Now</a></li>
+              </ul>
+            </div>
+      
+            <!-- Social Media Section -->
+            <div class="col-lg-2 col-md-12 text-center">
+              <h5>Follow Us</h5>
+              <div class="mb-4">
+                <a class="btn btn-outline-warning btn-floating m-1" href="https://www.google.com/" role="button">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a class="btn btn-outline-danger btn-floating m-1" href="https://www.instagram.com/abhithenext" role="button">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/ABHIII034" role="button">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Footer Bottom -->
+          <div class="text-center mt-4" style="color: gray; font-size: 14px;">
+            © 2020 Copyright All rights reserved:
+            <a class="text-white" href="https://github.com/ABHIII034">pepperHot.Official.com</a>
+          </div>
+        </div>
+      </footer>
+      
+
+  </body>
+</html>
